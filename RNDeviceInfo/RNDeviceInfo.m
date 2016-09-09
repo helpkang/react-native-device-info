@@ -149,6 +149,18 @@ RCT_EXPORT_MODULE()
     NSString *uniqueId = [identifierForVendor UUIDString];
     NSString *phoneNumber = [[NSUserDefaults standardUserDefaults] stringForKey:@"SBFormattedPhoneNumber"];
     
+        
+//       NSLog(@"pre phoneNumber %@", phoneNumber);
+    
+    if(phoneNumber==(id) [NSNull null] || [phoneNumber length]==0 || [phoneNumber isEqualToString:@""])
+    {
+        phoneNumber = @"";
+    }
+    
+//    NSLog(@"phoneNumber %@", phoneNumber);
+
+//ios phone number not allow
+    
     return @{
              @"systemName": currentDevice.systemName,
              @"systemVersion": currentDevice.systemVersion,
