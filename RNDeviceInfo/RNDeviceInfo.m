@@ -147,10 +147,12 @@ RCT_EXPORT_MODULE()
 
     NSUUID *identifierForVendor = [currentDevice identifierForVendor];
     NSString *uniqueId = [identifierForVendor UUIDString];
-
+    NSString *phoneNumber = [[NSUserDefaults standardUserDefaults] stringForKey:@"SBFormattedPhoneNumber"];
+    
     return @{
              @"systemName": currentDevice.systemName,
              @"systemVersion": currentDevice.systemVersion,
+             @"phoneNumber":phoneNumber,
              @"model": self.deviceName,
              @"deviceId": self.deviceId,
              @"deviceName": currentDevice.name,
