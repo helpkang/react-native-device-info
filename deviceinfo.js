@@ -14,7 +14,7 @@ module.exports = {
   getManufacturer: function () {
     return RNDeviceInfo.systemManufacturer;
   },
-  getPoneNumber: function () {
+  getPhoneNumber: function () {
     return RNDeviceInfo.phoneNumber;
   },
   getModel: function () {
